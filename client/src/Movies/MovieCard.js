@@ -5,7 +5,7 @@ const MovieCard = props => {
   
   return (
     <Fragment>
-      <h3>... {this.props}</h3>
+      <h3> {this.props}</h3>
       
     </Fragment>
   )

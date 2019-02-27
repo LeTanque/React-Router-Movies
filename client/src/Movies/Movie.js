@@ -51,7 +51,7 @@ export default class Movie extends Component {
       <React.Fragment>
 
         <div className="save-wrapper">
-          <MovieCard movie={this.movie} />
+          {/* <MovieCard movie={this.movie} /> */}
           <div className="movie-card">
             
             <h2>{title}</h2>
