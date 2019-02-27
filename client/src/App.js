@@ -20,9 +20,16 @@ export default class App extends Component {
     this.setState({ savedList });
   };
 
-  render() {
-    console.log(this.state);
+  removeFromSavedList = movie => {
+    const savedList = this.state.savedList;
+    for ( let i=0; i<savedList.length; i++ ) {
+      if ( savedList[i].id === movie.id) {
+        savedList.splice(i, 1)
+      }
+    }
+  };
 
+  render() {
     return (
       <Fragment>
 
@@ -35,7 +42,11 @@ export default class App extends Component {
         <Route 
           path='/movies/:id' 
           // component={Movie}
-          render={props => <Movie {...props} addToSavedList={this.addToSavedList} />}
+          render={props => <Movie {...props} 
+                            savedList={this.state.savedList} 
+                            addToSavedList={this.addToSavedList} 
+                            removeFromSavedList={this.removeFromSavedList} 
+                          />}
         />
         {/* <div>Replace this Div with your Routes</div> */}
 

@@ -1,9 +1,31 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
+  background-color: #f2f2f2;
+  font-size: 1.2rem;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #f2f2f2;
 }
+
+
+a {
+  color: black;
+  text-decoration: none;
+  &:hover {
+    color: darkslategray;
+    transition-duration: 0.5s;
+  }
+}
+
+hr {
+  width: 80%;
+  border-top: #ccc;
+  margin: 20px auto;
+}
+
 
 .movie-card {
   background-color: #fff;
@@ -26,23 +48,41 @@ body {
   border: 0;
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
     0 2px 4px rgba(0, 0, 0, 0.24);
-  padding: 1rem;
-  cursor: pointer;
-  position: relative;
-  margin: 1rem auto;
-  width: 75%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  padding: 50px 1rem 1rem;
+  margin: 1rem auto;
+  cursor: pointer;
+  width: 75%;
+  h3 {
+    font-weight: 400;
+    background-color: lightskyblue;
+    padding: 5px 10px 5px 20px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 15px;
+  }
+  .saved-movie {
+    margin: 0 10px;
+  }
+  .home-button {
+    font-weight: 700;
+    background-color: lightskyblue;
+    padding: 5px 20px 5px 10px;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    &:hover {
+      background-color: lightcoral;
+      transition-duration: 0.5s;
+    }
+  }
 }
 
-.saved-list h3 {
-  margin-right: 10px;
-}
-
-.saved-movie {
-  margin: 0 10px;
-}
 .saved-active {
   color: blue;
   border: 1px solid grey;
@@ -52,31 +92,19 @@ body {
   position: relative;
   width: 75%;
   margin: 1rem auto;
-}
-.save-button {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  border: 1px solid grey;
-  padding: 5px 10px;
-  background-color: lightseagreen;
-}
-.save-button:hover {
-  background-color: green;
-  color: white;
-}
-
-.home-button {
-  padding: 5px 10px;
-  background-color: lightskyblue;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-  &:hover {
-    color: darkslategray;
-    transition-duration: 0.5s;
-    
+  .save-button {
+    background-color: lightskyblue;
+    font-weight: 700;
+    font-size: 1.4rem;
+    border: 0;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    padding: 5px 20px 5px 10px;
+    &:hover {
+      background-color: lightcoral;
+      color: darkslategray;
+      transition-duration: 0.5s;
+    }
   }
 }
